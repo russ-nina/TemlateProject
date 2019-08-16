@@ -1,3 +1,3 @@
 window.onload = function () {
-    alert('I work')
+    alert('I work, hello!')
 };
