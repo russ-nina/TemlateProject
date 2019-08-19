@@ -46,6 +46,82 @@ table {
 }
 /*-----------------------------------------------------------------------------*/
 /* End of Eric Meyer's CSS Reset */
+
+/* Fonts */
+/*-----------------------------------------------------------------------------*/
+@font-face {
+
+    font-family: 'OpenSansBoldItalic';
+
+    src: url('../fonts/OpenSans/OpenSans-BoldItalic.ttf');
+
+    font-weight: bold;
+
+    font-style: italic;
+}
+@font-face {
+
+    font-family: 'RobotoCondensedRegular';
+
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-Regular.ttf');
+
+    font-weight: normal;
+
+    font-style: normal;
+}
+@font-face {
+
+    font-family: 'RobotoCondensedBold';
+
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-Bold.ttf');
+
+    font-weight: bold;
+
+    font-style: normal;
+}
+@font-face {
+
+    font-family: 'RobotoCondensedBoldItalic';
+
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-BoldItalic.ttf');
+
+    font-weight: bold;
+
+    font-style: italic;
+}
+@font-face {
+
+    font-family: 'RobotoCondensedItalic';
+
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-Italic.ttf');
+
+    font-weight: normal;
+
+    font-style: italic;
+}
+@font-face {
+
+    font-family: 'RobotoCondensedLight';
+
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-Light.ttf');
+
+    font-weight: normal;
+
+    font-style: normal;
+}
+@font-face {
+
+    font-family: 'RobotoCondensedLightItalic';
+
+    src: url('../fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf');
+
+    font-weight: normal;
+
+    font-style: italic;
+}
+/*-----------------------------------------------------------------------------*/
+/* End Fonts */
+
 html,body {
     height: 100%;
 }
@@ -61,11 +137,253 @@ html,body {
 /*-----------------------------------------------------------------------------*/
 header{
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(0, 104, 177, 1) 21%, rgba(45, 139, 215, .95)21%, rgba(45, 139, 215, .95)100%);
-    background-size: cover;
+    min-height: 630px;
+    background-image: url("../img/imagesHeader/bg-landscape.jpg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 
+.wrap_content_head{
+    width: 68%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+
+}
+.wrap_nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    min-height: 95px;
+}
+/*Left*/
+/*---------------------------------------------------------*/
+.left_nav{
+    min-width: 53%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.products{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 110px;
+    width: 46%;
+}
+.products p{
+    text-transform: uppercase;
+    font-family: RobotoCondensedRegular, sans-serif ;
+    font-size: 18px;
+    color: #ffffff;
+}
+.product{
+    font-family: RobotoCondensedBold, sans-serif ;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.product:hover{
+    color: #f7c507;
+    text-decoration: underline;
+}
+.services, .contacts{
+    text-transform: uppercase;
+    font-family: RobotoCondensedBold, sans-serif ;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.services:hover, .contacts:hover{
+    color: #f7c507;
+    text-decoration: underline;
+}
+/*Right*/
+/*---------------------------------------------------------*/
+.right_nav{
+    display: flex;
+    justify-content: space-around;
+    width: 39%;
+    margin-top: -5px;
+}
+.phones{
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-family: RobotoCondensedBold, sans-serif ;
+    font-size: 18px;
+}
+.phone{
+    background-color: transparent;
+    color: black;
+    font-family: RobotoCondensedBold, sans-serif ;
+    font-size: 18px;
+}
+.requestCall{
+    font-family: RobotoCondensedLight, sans-serif ;
+    font-size: 14px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 150%;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.lang{
+    font-family: RobotoCondensedRegular, sans-serif ;
+    font-size: 12px;
+    color: #ffffff;
+    width: 26px;
+    height: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.activeLang{
+    color: #02399e;
+    background-color: #ffffff;
+}
+/*Logo*/
+/*-----------------------------------------------------------------------------*/
+.wrap_name_site{
+    width: 57%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 85px;
+}
+.logo img {
+    width: 145px;
+    height: 140px;
+}
+.slogan{
+    font-family: RobotoCondensedBold, sans-serif ;
+    font-size: 56px;
+    text-transform: uppercase;
+}
+/*Present products*/
+/*-----------------------------------------------------------------------------*/
+.wrap_present_products{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+.wrap_product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.descriptionSize{
+    width: 220px;
+    height: 85px;
+    background-color: #259eb3;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.liter{
+    font-family: RobotoCondensedBold, sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+}
+.look_product{
+    font-family: RobotoCondensedRegular, sans-serif;
+    font-size: 18px;
+    color: #f7c507;
+    letter-spacing: 0.15em;
+}
+/*Company description*/
+/*-----------------------------------------------------------------------------*/
+.wrap_company_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.company_offer{
+    width: 92%;
+    min-height: 125px;
+    background-color: #f7c507;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding-left: 100px;
+    padding-right: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 65px;
+    margin-bottom: 40px;
+}
+.company_offer::before{
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/imagesHeader/sign-90x90.svg");
+}
+.text_offer{
+    font-family: RobotoCondensedRegular, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 30px;
+}
+.text_offer_bold{
+    font-family: RobotoCondensedBold, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 30px;
+}
+.about_company{
+    padding-right: 115px;
+    padding-left: 115px;
+}
+.about_company p{
+    font-family: RobotoCondensedRegular, sans-serif;
+    font-size: 21px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 30px;
+}
+.about_company_blue{
+    text-transform: uppercase;
+    color: #259eb3;
+
+}
+.order_now{
+    width: 220px;
+    height: 60px;
+    background-color: #f7c507;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+.order_now p{
+    font-family: RobotoCondensedRegular, sans-serif;
+    font-size: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 60px;
+}
 /*Main*/
 /*-----------------------------------------------------------------------------*/
 main{
@@ -80,6 +398,6 @@ footer{
     flex: 0 0 auto;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, rgba(0, 104, 177, 1) 21%, rgba(45, 139, 215, .95)21%, rgba(45, 139, 215, .95)100%);
-    background-size: cover;
+    /*background: linear-gradient(to top, rgba(0, 104, 177, 1) 21%, rgba(45, 139, 215, .95)21%, rgba(45, 139, 215, .95)100%);*/
+    /*background-size: cover;*/
 }
